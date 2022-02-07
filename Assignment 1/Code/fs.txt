@@ -1,0 +1,9 @@
+function [fs]=FourierSeries(ak)
+L=length(ak);
+N=(L-1)/2;
+w0=2*pi/N;
+fs = zeros(1,2*N+1);
+syms k;
+for n = -N:N
+    fs=symsum(ak * exp(1i*k*w0*n), k, 0, N);
+end

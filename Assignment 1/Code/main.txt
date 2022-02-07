@@ -1,0 +1,5 @@
+signal=zeros(1,500);
+signal(125:375)=1;
+ak=FourierCoeff(signal);
+fs=FourierSeries(ak);
+stem(ak);
